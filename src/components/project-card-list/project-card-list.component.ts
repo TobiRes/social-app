@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Project } from "src/models/project.model";
 
 @Component({
@@ -8,6 +8,8 @@ import { Project } from "src/models/project.model";
 })
 export class ProjectCardListComponent implements OnInit {
   projects: Project[];
+  @Input()
+  title: string;
 
   constructor() {
     this.projects = [];
