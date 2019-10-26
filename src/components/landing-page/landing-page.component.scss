@@ -11,7 +11,8 @@
     background-image: url("../../assets/swing.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    mask: url("#mask1")
+    clip-path: ellipse(87% 64% at 49% 36%);
+    //mask: url("#mask1")
   }
 }
 
