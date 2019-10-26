@@ -1,5 +1,5 @@
-$primary-color: #FF4E50;
-$secondary-color: #F9D423;
+$primary-color: #ff4e50;
+$secondary-color: #f9d423;
 $textcolor: white;
 
 $main-gradient: linear-gradient(299deg, $secondary-color, $primary-color);
@@ -7,4 +7,6 @@ $main-gradient: linear-gradient(299deg, $secondary-color, $primary-color);
 $font-size-default: 1.5vmin;
 $navbar-height: 8vh;
 
-$primary-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.45);;
+$primary-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.45);
+$title-font: "Muli", sans-serif;
+$text-font: "Indie Flower", cursive;

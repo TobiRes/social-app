@@ -1,32 +1,26 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule, Routes } from "@angular/router";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { SearchFormComponent } from "src/components/search-form/search-form.component";
+import { LandingPageComponent } from "../components/landing-page/landing-page.component";
 import { MainContainerComponent } from "../components/main-container/main-container.component";
-import { SearchFormComponent } from "../components/search-form/search-form.component";
+import { NavbarComponent } from "../components/navbar/navbar.component";
 import { reducers } from "../store";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MainContainerComponent } from '../components/main-container/main-container.component';
-import {StoreModule} from '@ngrx/store';
-import {reducers} from '../store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {RouterModule, Routes} from '@angular/router';
-import { NavbarComponent } from '../components/navbar/navbar.component';
-import { LandingPageComponent } from '../components/landing-page/landing-page.component';
-
 const appRoutes: Routes = [
   {
-    path: 'welcome',
+    path: "welcome",
     component: LandingPageComponent
   },
-  { path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full'
+  {
+    path: "search",
+    component: SearchFormComponent
   },
+  { path: "", redirectTo: "/welcome", pathMatch: "full" }
 ];
 
 @NgModule({
@@ -34,16 +28,15 @@ const appRoutes: Routes = [
     AppComponent,
     MainContainerComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
-    RouterModule.forRoot(
-      appRoutes,
-    )
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

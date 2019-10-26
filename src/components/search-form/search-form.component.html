@@ -1,7 +1,25 @@
 <div class="search-form-wrapper">
   Hi
-  <input type="text" id="place" value="{place}" />
-  <input type="text" id="place" value="{topic}" />
-  <input type="date" id="place" value="{time}" />
-  <select title="category"> </select>
+
+  <input
+    [value]="searchProps.place"
+    (input)="searchProps.place = $event.target.value"
+  />
+  <input
+    type="text"
+    id="topic"
+    [value]="searchProps.topic"
+    (input)="searchProps.topic = $event.target.value"
+  />
+  <input
+    type="date"
+    id="time"
+    value="searchProps.{time}"
+    (input)="searchProps.time = $event.target.value"
+  />
+  <select title="category">
+    <option>eins</option>
+    <option>zwei</option>
+  </select>
+  <button type="submit" (click)="storeTo()">Suche</button>
 </div>
