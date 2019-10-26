@@ -9,7 +9,9 @@
   box-sizing: border-box;
   position: relative;
   color: $textcolor;
-
+  -webkit-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
   .logo-wrapper {
     position: absolute;
     left: 8vmin;

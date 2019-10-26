@@ -1,4 +1,11 @@
 <div class="main-wrapper">
   <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
+  <ng-sidebar-container showBackdrop="true">
+
+    <!-- A sidebar -->
+    <ng-sidebar [(opened)]="sideMenuActive" position="right" showBackdrop="true">
+    </ng-sidebar>
+
+    <router-outlet ng-sidebar-content></router-outlet>
+  </ng-sidebar-container>
 </div>

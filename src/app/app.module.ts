@@ -10,6 +10,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {RouterModule, Routes} from '@angular/router';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { LandingPageComponent } from '../components/landing-page/landing-page.component';
+import {SidebarModule} from 'ng-sidebar';
 
 const appRoutes: Routes = [
   {
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     StoreDevtoolsModule.instrument(),
     RouterModule.forRoot(
       appRoutes,
-    )
+    ),
+    SidebarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
