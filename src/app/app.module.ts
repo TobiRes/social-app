@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule, Routes } from "@angular/router";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { ProjectCardComponent } from "src/components/project-card/project-card.component";
 import { SearchFormComponent } from "src/components/search-form/search-form.component";
 import { LandingPageComponent } from "../components/landing-page/landing-page.component";
 import { MainContainerComponent } from "../components/main-container/main-container.component";
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     MainContainerComponent,
     NavbarComponent,
     LandingPageComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
