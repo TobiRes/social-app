@@ -4,6 +4,7 @@ import {InjectionToken} from '@angular/core';
 import {sidebarReducer} from './reducer/siderbar.reducer';
 import {organizationReducer, OrganizationState} from './reducer/organization.reducer';
 import {userReducer, UserState} from './reducer/user.reducer';
+import {AuthEffects} from './effects/auth.effects';
 
 export interface State {
   counter: CounterState;
@@ -19,5 +20,6 @@ export const reducers: ActionReducerMap<State> = {
   userState: userReducer
 }
 
-export const reducerToken = new InjectionToken<ActionReducerMap<State>>("Registered Reducers");
-Object.assign(reducerToken, reducers);
+export const effects = [
+  AuthEffects
+];

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainContainerComponent } from '../components/main-container/main-container.component';
 import {StoreModule} from '@ngrx/store';
-import {reducers} from '../store';
+import {effects, reducers} from '../store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {RouterModule, Routes} from '@angular/router';
 import { NavbarComponent } from '../components/navbar/navbar.component';
@@ -15,6 +15,7 @@ import { OrganisationRegistrationComponent } from '../components/organisation-re
 import {FormsModule} from '@angular/forms';
 import { UserRegistrationComponent } from '../components/user-registration/user-registration.component';
 import { RegistrationComponent } from '../components/registration/registration.component';
+import {EffectsModule} from '@ngrx/effects';
 
 const appRoutes: Routes = [
   {
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
       appRoutes,
     ),
     SidebarModule.forRoot(),
-    FormsModule
+    FormsModule,
+    EffectsModule.forRoot(effects),
   ],
   providers: [],
   bootstrap: [AppComponent]
