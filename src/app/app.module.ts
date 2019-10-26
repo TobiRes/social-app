@@ -11,6 +11,8 @@ import {RouterModule, Routes} from '@angular/router';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { LandingPageComponent } from '../components/landing-page/landing-page.component';
 import {SidebarModule} from 'ng-sidebar';
+import { OrganisationRegistrationComponent } from '../components/organisation-registration/organisation-registration.component';
+import {FormsModule} from '@angular/forms';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +23,9 @@ const appRoutes: Routes = [
     redirectTo: '/welcome',
     pathMatch: 'full'
   },
+  { path: 'register-organization',
+    component: OrganisationRegistrationComponent
+  },
 ];
 
 @NgModule({
@@ -28,7 +33,8 @@ const appRoutes: Routes = [
     AppComponent,
     MainContainerComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    OrganisationRegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
     ),
-    SidebarModule.forRoot()
+    SidebarModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

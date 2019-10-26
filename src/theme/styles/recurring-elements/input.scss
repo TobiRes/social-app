@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.simple-info {
+  height: 4vmin;
+  width: 30vmin;
+  border-radius: 14px;
+  border: 2px solid white;
+  padding: 1vmin 2vmin;
+  color: $primary-color;
+  font-size: $font-size-default;
+
+  &:focus {
+    box-shadow: 0 0.8vmin 1.6vmin rgba(0,0,0,0.3);
+  }
+}
