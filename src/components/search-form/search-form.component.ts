@@ -18,7 +18,8 @@ const initialState: SearchState = {
 })
 export class SearchFormComponent implements OnInit {
   constructor(private store: Store<State>, private router: Router) {
-    this.searchProps.place = "asd";
+    this.searchProps.place = "WO";
+    this.searchProps.topic = "WAS";
   }
 
   searchProps: SearchState = initialState;
