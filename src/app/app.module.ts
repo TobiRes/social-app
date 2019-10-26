@@ -13,6 +13,7 @@ import { LandingPageComponent } from '../components/landing-page/landing-page.co
 import {SidebarModule} from 'ng-sidebar';
 import { OrganisationRegistrationComponent } from '../components/organisation-registration/organisation-registration.component';
 import {FormsModule} from '@angular/forms';
+import { UserRegistrationComponent } from '../components/user-registration/user-registration.component';
 
 const appRoutes: Routes = [
   {
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     MainContainerComponent,
     NavbarComponent,
     LandingPageComponent,
-    OrganisationRegistrationComponent
+    OrganisationRegistrationComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,
