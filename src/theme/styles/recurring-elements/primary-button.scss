@@ -1,16 +1,16 @@
 @import "../../variables";
 
 .primary-button {
-  border-radius: 14px;
-  background: $secondary-color;
+  border-radius: 3vmin;
+  background: $primary-color;
   box-shadow: $primary-box-shadow;
   transition: all 0.3s ease-out;
   margin: 1vmin;
   color: $textcolor;
   font-size: $font-size-default-large;
-  padding: 2vmin 3vmin;
+  padding: 1.5vmin 3vmin;
   border: 0;
-  cursor: pointer;
+  cursor: pointer !important;
 
   &:hover {
     transform: scale(1.05);

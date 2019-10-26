@@ -9,16 +9,22 @@
   box-sizing: border-box;
   position: relative;
   color: $textcolor;
-  -webkit-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
-  box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  background: white;
   .logo-wrapper {
     position: absolute;
     left: 8vmin;
-    font-family: $title-font;
-    font-size: $font-size-title-large;
+    font-family: $title-font !important;
+    font-size: $font-size-title;
     top: 50%;
     transform: translateY(-50%);
+    color: black;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: $font-size-title-large;
+      margin-right: 1vmin;
+    }
   }
 
   .navigation-wrapper {
@@ -28,6 +34,24 @@
     font-size: $font-size-title-large;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+
+    .nav-link-wrapper {
+      margin-right: 3vmin;
+      display: flex;
+      align-items: center;
+      .nav-link {
+        color: black;
+        font-weight: bold;
+        font-size: $font-size-default;
+        margin-right: 2vmin;
+
+      }
+      img {
+        height: $font-size-default-large;
+      }
+    }
 
     .burger-menu {
       padding-top: 13px;

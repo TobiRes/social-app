@@ -1,16 +1,16 @@
-$primary-color: #FF4E50;
-$secondary-color: #F9D423;
-$textcolor: white;
+  $primary-color: #FF5E00;
+  $secondary-color: #F9D423;
+  $textcolor: white;
 
-$main-gradient: linear-gradient(299deg, $secondary-color, $primary-color);
+  $main-gradient: linear-gradient(299deg, $secondary-color, $primary-color);
 
-$font-size-default: 2vmin;
-$font-size-title: 4.5vmin;
-$font-size-default-large: 3vmin;
-$font-size-title-large: 6.5vmin;
-$navbar-height: 8vh;
+  $font-size-default: 2.3vmin;
+  $font-size-title: 4.5vmin;
+  $font-size-default-large: 3vmin;
+  $font-size-title-large: 6.5vmin;
+  $navbar-height: 8vh;
 
-$text-font: 'Muli', sans-serif;
-$title-font: 'Indie Flower', cursive;
+  $text-font: 'Muli', sans-serif;
+  $title-font: 'Kaushan Script', cursive;
 
-$primary-box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.55);
+  $primary-box-shadow: 0 13px 12px rgba(0,0,0,0.55);

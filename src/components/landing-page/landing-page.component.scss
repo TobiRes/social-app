@@ -6,18 +6,191 @@
   height: 100vh - $navbar-height;
   width: 100vw;
   position: relative;
+  overflow-x: hidden;
 
-  .masked-image-wrapper {
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
+  .project-section {
+    .project-list {
+      height: 60vh;
+      padding: 10vmin 0;
+      background-color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .project-wrapper {
+        padding: 0 5vmin;
+        display: flex;
+        justify-content: center;
+
+        .project {
+          height: 62vmin;
+          width: 43vmin;
+          background: white;
+          border-radius: 3vmin;
+          margin: 0 4vmin;
+          color: black;
+          display: flex;
+          box-shadow: -3px 5px 27px -7px rgba(0,0,0,0.75);
+          flex-direction: column;
+          transition: all .4s ease-in-out;
+          opacity: 0.8;
+          &:hover {
+            opacity: 1;
+            transform: scale(1.02);
+          }
+
+          .title-section {
+            padding: 1.5vmin 3vmin;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title {
+              font-size: $font-size-default;
+            }
+
+            .subtitle {
+              font-size: $font-size-default * 0.75;
+            }
+          }
+
+          .project-image {
+            box-shadow: 0 6px 11px -7px rgba(0,0,0,0.75);
+            width: 100%;
+          }
+          .description {
+            padding: 2.2vmin;
+            font-size: $font-size-default * 0.75;
+          }
+          .location, .registered-user {
+            display: flex;
+            align-items: center;
+            padding: 0 2.2vmin;
+            font-family: $title-font !important;
+            font-size: 2vmin;
+            justify-content: left;
+            img {
+              height: 2.5vmin;
+              width: 2.5vmin;
+              margin-right: 1vmin;
+            }
+          }
+          .registered-user {
+            margin-top: 1vmin;
+            font-family: $text-font !important;
+          }
+
+          .more {
+            margin: 2.5vmin 1vmin 1vmin 1vmin;
+            box-shadow: 0 6px 11px -7px rgba(0,0,0,0.75);
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+
   }
 
-  .masked-image {
+  .middle-image {
+    margin-top: 30vmin;
+    height: 30vmin;
+    width: 100%;
+    background: red;
+    background-image: url("../../assets/action-cement-construction-2219024.png");
+    background-size: cover;
+    padding: 5vmin 0 3vmin 0;
+
+    .speech-bubble {
+      float: right;
+      margin-right: 10vmin;
+      height: 24vmin;
+      width: 55vmin;
+      padding: 3vmin;
+      box-sizing: border-box;
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+      color: #383838;
+      display: flex;
+      align-items: center;
+      font-size: $font-size-default;
+      border-radius: 3vmin;
+
+      img {
+        height: 16vmin;
+        margin-right: 3vmin;
+      }
+    }
+
+    .speech-bubble:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 35%;
+      width: 0;
+      height: 0;
+      border: 33px solid transparent;
+      border-top-color: rgba(255, 255, 255, 0.75);
+      border-bottom: 0;
+      border-left: 0;
+      margin-left: -16.5px;
+      margin-bottom: -33px;
+    }
+  }
+
+  .middle-section {
+    position: absolute;
+    bottom: -30vmin;
+
+    .experience {
+      margin-top: -16vmin;
+      height: 30vmin;
+      width: 100%;
+      background: $primary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 6vmin;
+      padding-bottom: 3vmin;
+      box-sizing: border-box;
+      .brunette {
+        position: absolute;
+        left: 10vmin;
+        height: 15vmin;
+        clip-path: circle(50% at 50% 50%);
+        box-shadow: 0px 3px 18px 0px rgba(0,0,0,0.75);
+      }
+
+      .story {
+        width: 60%;
+        color: white;
+        font-size: $font-size-default;
+        display: flex;
+        padding: 0 8vmin;
+        position: relative;
+        line-height: 2.5vmin;
+        img {
+          height: 5vmin;
+          position: absolute;
+        }
+        .up {
+          left: 0;
+          top: -3vmin;
+        }
+        .down {
+          right: 1vmin;
+          bottom: -3vmin;
+        }
+      }
+    }
+  }
+  .background-image {
     width: 100%;
     height: 100%;
-    background-image: url("../../assets/swing.jpg");
+    background-image: url("../../assets/cover.png");
     background-repeat: no-repeat;
     background-size: cover;
-    clip-path: ellipse(87% 64% at 49% 36%);
     //mask: url("#mask1")
   }
 
@@ -31,7 +204,7 @@
     flex-direction: column;
     justify-content: left;
     color: $textcolor;
-    width: 70vmin;
+    width: 80vmin;
 
     .title {
       font-family: $title-font !important;
@@ -46,9 +219,17 @@
     .button-wrapper {
       width: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: left;
       .get-started-button {
         margin-top: 5vmin;
+        width: 38vmin;
+        display: flex;
+        align-items: center;
+        padding: .5vmin 1vmin .5vmin 2.5vmin !important;
+        img {
+          float: right;
+          margin-left: 13vmin;
+        }
       }
     }
 
