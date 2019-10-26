@@ -1,6 +1,5 @@
 import {ActionReducerMap} from '@ngrx/store';
 import {counterReducer, CounterState} from './reducer/counter.reducer';
-import {InjectionToken} from '@angular/core';
 import {sidebarReducer} from './reducer/siderbar.reducer';
 import {organizationReducer, OrganizationState} from './reducer/organization.reducer';
 import {userReducer, UserState} from './reducer/user.reducer';

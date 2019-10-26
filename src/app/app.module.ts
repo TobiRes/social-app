@@ -16,6 +16,9 @@ import {FormsModule} from '@angular/forms';
 import { UserRegistrationComponent } from '../components/user-registration/user-registration.component';
 import { RegistrationComponent } from '../components/registration/registration.component';
 import {EffectsModule} from '@ngrx/effects';
+import {AuthEffects} from '../store/effects/auth.effects';
+import {AuthService} from '../services/auth.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
@@ -52,8 +55,9 @@ const appRoutes: Routes = [
     SidebarModule.forRoot(),
     FormsModule,
     EffectsModule.forRoot(effects),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthEffects, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
