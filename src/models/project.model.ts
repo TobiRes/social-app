@@ -9,8 +9,10 @@ export interface ProjectDTO {
   startDate: string;
   endDate: string;
   location: Address;
-  stuffAndThings: StuffAndThings;
+  stuffAndThings?: StuffAndThings;
   picture: string;
+  participantTotal: number;
+  participantTaken: number;
 }
 
 export interface Project extends ProjectDTO {

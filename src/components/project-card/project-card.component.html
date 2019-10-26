@@ -1,8 +1,19 @@
 <div class="project-card-wrapper">
-  <img [src]="project.picture" />
-  Name:{{ project.title }} Ort: {{ project.location.city }} Datum:{{
-    project.startDate
-  }}
+  <div class="title">{{ project.title }}</div>
+  <div class="organization-name">{{ project.createdBy }}</div>
+  <img class="picture" [src]="project.picture" />
+  <div class="shortDescription">{{ project.shortDescription }}</div>
+  <div class="small-info">
+    <div class="location">
+      {{ project.location.city }}
+    </div>
 
-  <div class="shortDescription">{{ project.shortDescription }}}</div>
+    <div class="participants">
+      {{ project.participantTaken }}/{{ project.participantTotal }}
+    </div>
+    <div class="startTime">
+      {{ project.startDate }}
+    </div>
+  </div>
+  <button>Mehr</button>
 </div>

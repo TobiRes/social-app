@@ -8,6 +8,7 @@ import { SearchFormComponent } from "src/components/search-form/search-form.comp
 import { LandingPageComponent } from "../components/landing-page/landing-page.component";
 import { MainContainerComponent } from "../components/main-container/main-container.component";
 import { NavbarComponent } from "../components/navbar/navbar.component";
+import { ProjectCardListComponent } from "../components/project-card-list/project-card-list.component";
 import { reducers } from "../store";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     LandingPageComponent,
     SearchFormComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectCardListComponent
   ],
   imports: [
     BrowserModule,
