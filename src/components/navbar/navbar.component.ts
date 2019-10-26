@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  menuActive = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onBurgerClicked() {
+    this.menuActive = !this.menuActive;
+  }
 }
