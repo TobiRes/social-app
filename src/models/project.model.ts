@@ -1,5 +1,5 @@
-import {Address} from './address.model';
-import {StuffAndThings} from './stuff-and-things.model';
+import { Address } from "./address.model";
+import { StuffAndThings } from "./stuff-and-things.model";
 
 export interface ProjectDTO {
   title: string;
@@ -9,9 +9,12 @@ export interface ProjectDTO {
   startDate: string;
   endDate: string;
   location: Address;
-  stuffAndThings: StuffAndThings;
+  stuffAndThings?: StuffAndThings;
+  picture: string;
+  participantTotal: number;
+  participantTaken: number;
 }
 
-export interface Project extends ProjectDTO{
+export interface Project extends ProjectDTO {
   id: string;
 }

@@ -1,0 +1,29 @@
+<div class="search-form-wrapper">
+  Hi
+  <input
+    class="topic"
+    type="text"
+    id="topic"
+    [value]="searchProps.topic"
+    (input)="searchProps.topic = $event.target.value"
+  />
+  <input
+    class="place"
+    [value]="searchProps.place"
+    (input)="searchProps.place = $event.target.value"
+  />
+
+  <input
+    class="dateField"
+    type="date"
+    id="time"
+    value="searchProps.{time}"
+    title="WANN"
+    (input)="searchProps.time = $event.target.value"
+  />
+  <!-- <select title="category" class="category">
+    <option>eins</option>
+    <option>zwei</option>
+  </select> -->
+  <button type="submit" class="filterButton" (click)="storeTo()">Filter</button>
+</div>
