@@ -1,7 +1,36 @@
 @import "../../theme/general";
 @import "../../theme/variables";
+@import "../../theme/styles/recurring-elements/burger-menu";
 
 .navbar-wrapper {
   width: 100vw;
   height: $navbar-height;
+  padding: 1vmin;
+  box-sizing: border-box;
+  position: relative;
+  color: $textcolor;
+  -webkit-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  box-shadow: inset 0px -10px 12px -11px rgba(0,0,0,0.75);
+  .logo-wrapper {
+    position: absolute;
+    left: 8vmin;
+    font-family: $title-font;
+    font-size: $font-size-title-large;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navigation-wrapper {
+    position: absolute;
+    right: 8vmin;
+    font-family: $text-font;
+    font-size: $font-size-title-large;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .burger-menu {
+      padding-top: 13px;
+    }
+  }
 }

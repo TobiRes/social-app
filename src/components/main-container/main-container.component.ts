@@ -1,37 +1,28 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {State} from '../../store';
-import {CounterState} from '../../store/reducer/counter.reducer';
-import {IncrementAction} from '../../store/actions/counter.action';
-import { untilDestroyed } from 'ngx-take-until-destroy';
+import {untilDestroyed} from 'ngx-take-until-destroy';
 
 @Component({
   selector: 'app-main-container',
   templateUrl: './main-container.component.html',
-  styleUrls: ['./main-container.component.scss']
+  styleUrls: ['./main-container.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class MainContainerComponent implements OnInit, OnDestroy {
-  counter: number;
+  sideMenuActive: boolean;
 
   constructor(private store: Store<State>) { }
 
   ngOnInit() {
-    this.subscribeToCounterState();
+    this.subscribeToSidebarState();
   }
 
   ngOnDestroy() {}
 
-  private subscribeToCounterState() {
-    this.store.select((state: State) => state.counter)
+  private subscribeToSidebarState() {
+    this.store.select((state: State) => state.sidebarActive)
       .pipe(untilDestroyed(this))
-      .subscribe((counter: CounterState) => this.counter = counter.counter);
-  }
-
-  incrementCounter() {
-    this.store.dispatch(new IncrementAction(this.counter + 1));
-  }
-
-  decrementCounter() {
-    this.store.dispatch(new IncrementAction(this.counter - 1));
+      .subscribe((active: boolean) => this.sideMenuActive = active);
   }
 }

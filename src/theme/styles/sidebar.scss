@@ -1,0 +1,10 @@
+@import "../variables";
+.ng-sidebar {
+  background: $textcolor;
+  width: 20%;
+}
+
+.ng-sidebar__backdrop {
+  background: black !important;
+  opacity: 0.6;
+}

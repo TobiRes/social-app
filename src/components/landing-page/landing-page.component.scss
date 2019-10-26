@@ -1,9 +1,15 @@
 @import "../../theme/general";
 @import "../../theme/variables";
+@import "../../theme/styles/recurring-elements/primary-button";
 
 .landing-wrapper {
   height: 100vh - $navbar-height;
   width: 100vw;
+  position: relative;
+
+  .masked-image-wrapper {
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
+  }
 
   .masked-image {
     width: 100%;
@@ -11,7 +17,41 @@
     background-image: url("../../assets/swing.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    mask: url("#mask1")
+    clip-path: ellipse(87% 64% at 49% 36%);
+    //mask: url("#mask1")
+  }
+
+  .info-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    color: $textcolor;
+    width: 70vmin;
+
+    .title {
+      font-family: $title-font !important;
+      margin-bottom: 4vmin;
+      font-size: $font-size-title-large;
+    }
+
+    .description {
+      font-size: $font-size-default-large;
+    }
+
+    .button-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .get-started-button {
+        margin-top: 5vmin;
+      }
+    }
+
   }
 }
 

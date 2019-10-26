@@ -1,0 +1,82 @@
+@import "../../theme/variables";
+@import "../../theme/general";
+@import "../../theme/styles/recurring-elements/input";
+
+.registration-wrapper {
+  position: relative;
+  height: 100vh - $navbar-height;
+  overflow: hidden;
+
+  .left-side, .right-side {
+    position: absolute;
+    height: 100vh - $navbar-height;
+    width: 50%;
+  }
+
+  .left-side {
+    left: 0;
+    background-size: cover;
+    background-image: url("../../assets/volunteer.jpg");
+  }
+
+  .right-side {
+    right: 0;
+    background-color: $primary-color;
+    padding-top: 3vmin;
+    display: flex;
+    align-items: center;
+
+    .primary-button {
+      margin-top: 5vmin;
+      margin-left: 4vmin;
+      padding: 1vmin 3vmin;
+
+      &[disabled]{
+        opacity: 0.8;
+        transform: none;
+        cursor: default;
+      }
+    }
+
+    .title {
+      font-family: $title-font;
+      font-size: $font-size-title;
+      color: white;
+    }
+
+    .simple-info {
+      margin: 1vmin 0;
+    }
+
+    .register-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .credentials-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 3vmin;
+        padding: 1vmin;
+        width: 100%;
+
+        .simple-info {
+          width: 80%;
+        }
+      }
+      .primary-button {
+        width: 15vmin;
+      }
+    }
+
+    .title {
+      font-family: $title-font;
+      font-size: $font-size-title;
+      color: white;
+    }
+
+    .simple-info {
+      margin: 1vmin 0;
+    }
+  }
+}

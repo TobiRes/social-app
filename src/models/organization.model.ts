@@ -2,7 +2,7 @@ import {Address} from './address.model';
 import {Project} from './project.model';
 
 export interface Organization {
-  id: string;
+  id?: string;
   name: string;
   username: string;
   password: string;
