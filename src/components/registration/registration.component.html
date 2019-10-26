@@ -1,0 +1,23 @@
+<div class="registration-wrapper">
+  <div class="left-side">
+
+  </div>
+  <div class="right-side">
+    <app-organisation-registration *ngIf="!temporaryOrgData"></app-organisation-registration>
+    <!-- Todo: fix ngif once the process is built -->
+    <div class="register-wrapper">
+      <div class="credentials-wrapper" *ngIf="temporaryOrgData">
+        <div class="title">
+          Über euch
+        </div>
+        <input type="text" class="simple-info" [(ngModel)]="username" placeholder="Nutzername">
+        <input type="text" class="simple-info" [(ngModel)]="password" placeholder="Passwort">
+        <input type="text" class="simple-info" [(ngModel)]="mail" placeholder="E-Mail">
+      </div>
+      <button class="primary-button" [disabled]="continueDisabled()" (click)="continueRegistration()" *ngIf="(!this.temporaryOrgData && this.userRegInProgress) || temporaryOrgData">
+        Weiter
+      </button>
+    </div>
+
+  </div>
+</div>

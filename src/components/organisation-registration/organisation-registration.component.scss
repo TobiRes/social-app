@@ -3,81 +3,58 @@
 @import "../../theme/styles/recurring-elements/input";
 @import "../../theme/styles/recurring-elements/primary-button";
 
-.registration-wrapper {
-  position: relative;
-  height: 100vh - $navbar-height;
-  overflow: hidden;
+.primary-button {
+  margin-top: 5vmin;
+  margin-left: 4vmin;
+  padding: 1vmin 3vmin;
+  width: 15vmin;
 
-  .left-side, .right-side {
-    position: absolute;
-    height: 100vh - $navbar-height;
-    width: 50%;
+  &[disabled]{
+    opacity: 0.8;
+    transform: none;
+    cursor: default;
+  }
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vmin;
+  padding: 1vmin;
+
+  .title {
+    font-family: $title-font;
+    font-size: $font-size-title;
+    color: white;
   }
 
-  .left-side {
-    left: 0;
-    background-size: cover;
-    background-image: url("../../assets/volunteer.jpg");
+  .simple-info {
+    margin: 1vmin 0;
   }
+  .long {
+    width: 80%;
+  }
+  .mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  .contact {
+    display: flex;
+    margin-top: 2vmin;
+    flex-direction: column;
 
-  .right-side {
-    right: 0;
-    background-color: $primary-color;
-    padding-top: 3vmin;
-
-    .primary-button {
-      margin-top: 5vmin;
-      margin-left: 4vmin;
-      padding: 1vmin 3vmin;
-
-      &[disabled]{
-        opacity: 0.8;
-        transform: none;
-        cursor: default;
-      }
-    }
-
-    .info-wrapper {
+    .contact-input-wrapper {
       display: flex;
-      flex-direction: column;
-      margin-left: 3vmin;
-      padding: 1vmin;
-
-      .title {
-        font-family: $title-font;
-        font-size: $font-size-title;
-        color: white;
-      }
-
-      .simple-info {
-        margin: 1vmin 0;
-      }
-      .long {
-        width: 80%;
-      }
-      .mission {
+      .contact-info, .address {
         display: flex;
         flex-direction: column;
-        justify-content: left;
       }
-      .contact {
-        display: flex;
-        margin-top: 2vmin;
-        flex-direction: column;
-
-        .contact-input-wrapper {
-          display: flex;
-          .contact-info, .address {
-            display: flex;
-            flex-direction: column;
-          }
-          .contact-info {
-            margin-right: 1vmin;
-          }
-          .address {
-            margin-left: 1vmin
-          }
-        }
+      .contact-info {
+        margin-right: 1vmin;
+      }
+      .address {
+        margin-left: 1vmin
       }
     }
   }

@@ -1,37 +1,30 @@
-<div class="registration-wrapper">
-  <div class="left-side">
-
+<div class="info-wrapper" *ngIf="activeOrganizationRegistration">
+  <div class="mission">
+    <div class="title">
+      Über euch
+    </div>
+    <input type="text" class="simple-info" [(ngModel)]="organization.name" placeholder="Wie heißt eure Organisation?">
+    <input type="text" class="simple-info long" [(ngModel)]="organization.shortDescription" placeholder="Beschreibt euch in knappen Worten.">
+    <input type="text" class="simple-info long" [(ngModel)]="organization.description" placeholder="Was ist eure Mission?">
   </div>
-  <div class="right-side">
-    <div class="info-wrapper" *ngIf="activeOrganizationRegistration">
-      <div class="mission">
-        <div class="title">
-          Über euch
-        </div>
-        <input type="text" class="simple-info" [(ngModel)]="organization.name" placeholder="Wie heißt eure Organisation?">
-        <input type="text" class="simple-info long" [(ngModel)]="organization.shortDescription" placeholder="Beschreibt euch in knappen Worten.">
-        <input type="text" class="simple-info long" [(ngModel)]="organization.description" placeholder="Was ist eure Mission?">
+  <div class="contact">
+    <div class="title">
+      Kontaktdaten
+    </div>
+    <div class="contact-input-wrapper">
+      <div class="contact-info">
+        <input type="text" class="simple-info" [(ngModel)]="organization.homepage" placeholder="Homepage">
+        <input type="text" class="simple-info" [(ngModel)]="organization.phone" placeholder="Telefonnummer">
+        <input type="text" class="simple-info" [(ngModel)]="organization.email" placeholder="E-Mail">
       </div>
-      <div class="contact">
-        <div class="title">
-          Kontaktdaten
-        </div>
-        <div class="contact-input-wrapper">
-          <div class="contact-info">
-            <input type="text" class="simple-info" [(ngModel)]="organization.homepage" placeholder="Homepage">
-            <input type="text" class="simple-info" [(ngModel)]="organization.phone" placeholder="Telefonnummer">
-            <input type="text" class="simple-info" [(ngModel)]="organization.email" placeholder="E-Mail">
-          </div>
-          <div class="address">
-            <input type="text" class="simple-info" [(ngModel)]="organization.address.street" placeholder="Straße">
-            <input type="text" class="simple-info" [(ngModel)]="organization.address.zip" placeholder="Postleitzahl">
-            <input type="text" class="simple-info" [(ngModel)]="organization.address.city" placeholder="Stadt">
-          </div>
-        </div>
+      <div class="address">
+        <input type="text" class="simple-info" [(ngModel)]="organization.address.street" placeholder="Straße">
+        <input type="text" class="simple-info" [(ngModel)]="organization.address.zip" placeholder="Postleitzahl">
+        <input type="text" class="simple-info" [(ngModel)]="organization.address.city" placeholder="Stadt">
       </div>
     </div>
-    <button class="primary-button" [disabled]="continueDisabled()" (click)="continueRegistration()" *ngIf="activeOrganizationRegistration">
-      Weiter
-    </button>
   </div>
 </div>
+<button class="primary-button" [disabled]="continueDisabled()" (click)="continueRegistration()" *ngIf="activeOrganizationRegistration">
+  Weiter
+</button>

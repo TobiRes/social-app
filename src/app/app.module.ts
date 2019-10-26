@@ -14,6 +14,7 @@ import {SidebarModule} from 'ng-sidebar';
 import { OrganisationRegistrationComponent } from '../components/organisation-registration/organisation-registration.component';
 import {FormsModule} from '@angular/forms';
 import { UserRegistrationComponent } from '../components/user-registration/user-registration.component';
+import { RegistrationComponent } from '../components/registration/registration.component';
 
 const appRoutes: Routes = [
   {
@@ -24,8 +25,8 @@ const appRoutes: Routes = [
     redirectTo: '/welcome',
     pathMatch: 'full'
   },
-  { path: 'register-organization',
-    component: OrganisationRegistrationComponent
+  { path: 'registration',
+    component: RegistrationComponent
   },
 ];
 
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     LandingPageComponent,
     OrganisationRegistrationComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

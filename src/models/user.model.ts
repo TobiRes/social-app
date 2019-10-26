@@ -5,7 +5,7 @@ export interface User {
   username: string;
   password: string;
   email: string;
-  birthday: string;
+  birthday?: string;
   phone?: string;
   profilePicture?: string;
   pastProjects?: Project[];
