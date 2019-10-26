@@ -5,15 +5,17 @@
   <div class="shortDescription">{{ project.shortDescription }}</div>
   <div class="small-info">
     <div class="location">
+      <img class="locIcon" src="../../assets/location2.svg" />
       {{ project.location.city }}
     </div>
 
     <div class="participants">
+      <img class="locIcon" src="../../assets/user.svg" />
       {{ project.participantTaken }}/{{ project.participantTotal }}
     </div>
     <div class="startTime">
       {{ project.startDate }}
     </div>
   </div>
-  <button>Mehr</button>
+  <button class="moreB">Mehr</button>
 </div>

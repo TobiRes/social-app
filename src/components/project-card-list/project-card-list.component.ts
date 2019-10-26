@@ -17,32 +17,31 @@ export class ProjectCardListComponent implements OnInit {
 
   ngOnInit() {
     this.projects[0] = {
-      title: "Project",
+      title: "Betreuung an Altennachmittag",
       id: "",
-      createdBy: "me",
-      location: { city: "og", street: "street", zip: "zip" },
-      startDate: "startDate",
+      createdBy: "Caritas",
+      location: { city: "Offenburg", street: "street", zip: "zip" },
+      startDate: "30.10.2019",
       endDate: "endDate",
-      shortDescription:
-        "This is a awsome short description and will help me identify problems, thanks ",
+      shortDescription: "Betreuung am Altenachmittags der Caritas",
       longDescription: "longDesc",
-      picture: "path to picture",
-      participantTotal: 10,
-      participantTaken: 4
+      picture: "../../assets/cares.jpg",
+      participantTotal: 4,
+      participantTaken: 2
     };
     this.projects[1] = {
-      title: "Project",
+      title: "Nachhilfe",
       id: "",
-      createdBy: "me",
-      location: { city: "og", street: "street", zip: "zip" },
-      startDate: "startDate",
+      createdBy: "Nachhilfewerk e.V.",
+      location: { city: "Lahr", street: "street", zip: "zip" },
+      startDate: "08.11.2019",
       endDate: "endDate",
       shortDescription:
-        "This is a awsome short description and will help me identify problems, thanks ",
+        "Unterstützung von Schülern im Alter von 6-12 Jahren bei Hausaufgaben ",
       longDescription: "longDesc",
-      picture: "path to picture",
-      participantTotal: 10,
-      participantTaken: 4
+      picture: "../../assets/school.jpg",
+      participantTotal: 2,
+      participantTaken: 0
     };
     this.projects[2] = {
       title: "Project",
@@ -54,7 +53,7 @@ export class ProjectCardListComponent implements OnInit {
       shortDescription:
         "This is a awsome short description and will help me identify problems, thanks ",
       longDescription: "longDesc",
-      picture: "path to picture",
+      picture: "../../assets/dog.jpg",
       participantTotal: 10,
       participantTaken: 4
     };
@@ -68,7 +67,21 @@ export class ProjectCardListComponent implements OnInit {
       shortDescription:
         "This is a awsome short description and will help me identify problems, thanks ",
       longDescription: "longDesc",
-      picture: "path to picture",
+      picture: "../../assets/builder.jpg",
+      participantTotal: 10,
+      participantTaken: 4
+    };
+    this.projects[4] = {
+      title: "Project",
+      id: "",
+      createdBy: "me",
+      location: { city: "og", street: "street", zip: "zip" },
+      startDate: "startDate",
+      endDate: "endDate",
+      shortDescription:
+        "This is a awsome short description and will help me identify problems, thanks ",
+      longDescription: "longDesc",
+      picture: "../../assets/builder.jpg",
       participantTotal: 10,
       participantTaken: 4
     };
