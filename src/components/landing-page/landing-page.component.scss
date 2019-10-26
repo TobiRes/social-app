@@ -1,0 +1,17 @@
+@import "../../theme/general";
+@import "../../theme/variables";
+
+.landing-wrapper {
+  height: 100vh - $navbar-height;
+  width: 100vw;
+
+  .masked-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/swing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask: url("#mask1")
+  }
+}
+

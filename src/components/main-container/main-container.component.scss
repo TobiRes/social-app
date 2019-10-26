@@ -4,22 +4,10 @@
 
 .main-wrapper {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 200vh;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background: linear-gradient(299deg, #ff5533, #364156, #11151c);
-
-  .counter-display {
-    font-size: $font-size-default * 2;
-    margin-bottom: 5vmin;
-    color: $textcolor;
-  }
-
-  .button-wrapper {
-    margin: 5vmin;
-    display: flex;
-    justify-content: center;
-  }
+  background:$main-gradient;
+  overflow-x: hidden;
 }

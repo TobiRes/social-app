@@ -1,9 +1,10 @@
-$primary-color: blue;
-$primary-color-hover: red;
+$primary-color: #FF4E50;
+$secondary-color: #F9D423;
 $textcolor: white;
 
+$main-gradient: linear-gradient(299deg, $secondary-color, $primary-color);
 
 $font-size-default: 1.5vmin;
-
+$navbar-height: 8vh;
 
 $primary-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.45);;
