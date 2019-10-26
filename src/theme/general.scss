@@ -1,0 +1,27 @@
+* {
+  font-family: 'Red Hat Text', Arial, sans-serif;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+*::-moz-focus-outer {
+  outline: 0 !important;
+}
+
+input[type='range']::-moz-focus-outer {
+  border: 0;
+}
+
+button {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+span, button {
+  font-weight: normal;
+}

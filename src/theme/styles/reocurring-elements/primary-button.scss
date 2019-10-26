@@ -1,0 +1,20 @@
+@import "../../variables";
+
+.primary-button {
+  height: 5vmin;
+  border-radius: 10px;
+  background: $primary-color;
+  box-shadow: $primary-box-shadow;
+  transition: all 0.3s ease-out;
+  margin: 1vmin;
+  color: $textcolor;
+  font-size: $font-size-default;
+  padding: 1vmin;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color-hover;
+    transform: scale(1.05);
+  }
+}

@@ -1,1 +1,13 @@
-<p>Hi Matze</p>
+<div class="main-wrapper">
+  <div class="counter-display">
+    {{counter}}
+  </div>
+  <div class="button-wrapper">
+    <button class="primary-button" (click)="incrementCounter()">
+      Increment
+    </button>
+    <button class="primary-button" (click)="decrementCounter()">
+      Decrement
+    </button>
+  </div>
+</div>
